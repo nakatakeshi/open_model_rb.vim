@@ -24,14 +24,16 @@ NeoBundle 'nakatakeshi/open_model_rb.vim'
 
 * bundle install
 
+```
 cd /path/to/neo_bundle_s_root/open_model_rb.vim/
 bundle install --path vendor/bundle
+```
 
 * add key mapping
 
 add key mapping on your vimrc as you like.
 
-```
+```vim
 " vertical split and jump to app file in current window
 autocmd FileType ruby :noremap fg :call OpenAppModel('vne')<ENTER>
 " jump to app file in current window
