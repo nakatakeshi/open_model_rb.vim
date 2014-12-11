@@ -44,11 +44,11 @@ function! s:OpenAppModel(cmd, word)
     if l:snaked_word =~ '[A-Z]'
         let l:snaked_word = system(printf(
             \'ruby -e "def to_snake_case(str);str.gsub(/::/, %s{/}).gsub(/([A-Z]+)([A-Z][a-z])/,%s{\1_\2}).gsub(/([a-z\d])([A-Z])/,%s{\1_\2}).tr(%s{-}, %s{_}).downcase;end; print to_snake_case(ARGV[0]);" %s',
-            \'%Q',
-            \'%Q',
-            \'%Q',
-            \'%Q',
-            \'%Q',
+            \'%q',
+            \'%q',
+            \'%q',
+            \'%q',
+            \'%q',
             \a:word)
         \)
     endif
